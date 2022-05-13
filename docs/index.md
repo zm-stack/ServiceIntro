@@ -1,10 +1,33 @@
-## Welcome to GitHub Pages
+# 智能合约安全审计服务介绍
 
-You can use the [editor on GitHub](https://github.com/my-code-cloud/SafeSmartContract/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+*<p align="right">by. 北京大学信息安全实验室</p>*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 项目简介  
 
-### Markdown
+&emsp;&emsp;传统软件漏洞检测技术难以支持区块链智能合约的安全审计，无法识别由于智能合约语义错误或漏洞导致的安全风险和合约交易损失。  
+&emsp;&emsp;本项目重点研究智能合约安全审计问题，涉及基于污点分析技术的已知智能合约漏洞检测、基于深度学习及语义分析技术的未知智能合约漏洞挖掘，和适用于组合交易的智能合约形式化验证方法。突破现有智能合约在漏洞检测、漏洞挖掘、功能验证技术在分析精度、处理规模和应用场景上的局限性。  
+&emsp;&emsp;目前，本项目团队基于上述关键技术的研究工作已取得多项专利及论文成果并发现以太坊平台多个中高危智能合约零日漏洞。基于该理论框架实现的智能合约安全审计工具集，有效实现对合约安全风险的检测、定位、异常诊断功能，为保障高并发环境下智能合约的可信、可靠提供理论基础和技术支撑。
+
+## <center>智能合约漏洞检测</center>
+
+&emsp;&emsp;本项目支持针对Ethereum系统solidity智能合约和Hyperledger Fabric系统Go链码的已知安全漏洞的检测和定位。
+
+### 针对solidity智能合约
+
+覆盖漏洞如下：
+|  序号  |  漏洞名称  |  说明  |
+|:-------------|:------------------|:------|
+|  1  |  溢出  |  未受保护的数值计算  |
+|  2  |  重入  |  函数内和函数间重入攻击  |
+|  3  |  交易顺序依赖  |  frontrunning相关攻击   |
+|  4  |  时间戳依赖  |  与交易时间相关的攻击  |
+|  5  |  拒绝服务  |  通过意外回滚或gaslimit导致的拒绝服务  |
+|  6  |  权限管理  |  因逻辑缺陷导致的权限丢失等安全问题  |
+
+&emsp;&emsp;有关上述漏洞的详细介绍及漏洞合约数据集参见[链接](https://swcregistry.io/)。  
+&emsp;&emsp;有关该检测工具的更多介绍参见[链接](https://github.com/Jianbo-Gao/EasyFlow)。
+
+### 针对Go链码
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
