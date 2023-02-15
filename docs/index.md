@@ -24,9 +24,10 @@
 
 #### 针对solidity智能合约
 
-覆盖漏洞如下：  
-| Num |	Detector | What it Detects | Impact | Confidence |
-|:----|:---------|:----------------|:-------|:-----------|
+覆盖漏洞如下：
+
+| 序号 | 检测类型 | 检测描述 | 等级 | 可信度 |
+|:-----|:--------|:--------|:-----|:------|
 |1	|abiencoderv2-array	|Storage abiencoderv2 array	|High	|High|
 |2	|arbitrary-send-erc20	|transferFrom uses arbitrary from	|High	|High|
 |3	|array-by-reference	|Modifying storage array by value	|High	|High|
@@ -111,9 +112,6 @@
 |82	|immutable-states	|State variables that could be declared immutable	|Optimization|	High|
 |83	|var-read-using-this	|Contract reads its own variable using this	|Optimization	|High|
 
-* 有关上述漏洞的详细介绍及漏洞合约数据集参见[链接](https://swcregistry.io/)
-* 有关该检测工具的更多介绍参见[链接](https://github.com/crytic/slither)。
-
 #### 针对Go链码
 
 目前正处于开发中，开发进度将及时在此处同步。检测原理如图：
@@ -134,9 +132,6 @@
 | 8 | 写后读           | 不能在同一个交易中更新并读取同一个key值        |
 | 9 | 隐私泄露         | 隐私数据不应影响链码执行路径，不应作为方法返回值|
 | 10 | 溢出            | 未受保护的数值计算                           |
-
-- 有关上述漏洞的合约数据集参见[链接](https://github.com/my-code-cloud/chaincode_repo/tree/main/github) 
-- 有关该检测工具的更多介绍参见[链接](https://github.com/sivachokkapu/revive-cc)。
 
 ### <center>智能合约形式化验证</center>
 
